@@ -54,3 +54,27 @@ def find(array,target):
 a=np.array([[1,3,8,10],[4,5,7,12],[9,11,14,19],[21,24,25,30]])
 flag=find(a,25)
 print(flag)
+
+
+
+#实现字符串反转的几种方法
+s="abcdefghijk"
+result=s[::-1]
+#转化为列表
+l=list(s)
+l.reverse()
+result2="".join(l)
+#列表模拟栈（先进先出）
+m=list(s)
+result3=""
+while len(m)>0:
+    result3+=m.pop()
+#for循环
+result4=""
+result5=""
+for i in range(len(s)-1,0,-1):
+    result4+=s[i]
+result4+=s[0]
+
+for i in range(len(s)):
+    result5+=s[len(s)-i-1]
